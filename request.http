@@ -6,14 +6,14 @@ GET https://randomuser.me/api
 GET https://jsonplaceholder.typicode.com/posts
 
 ### obteniendo una sola publicación                 getPostById($id)
-GET https://jsonplaceholder.typicode.com/posts/2
+GET https://jsonplaceholder.typicode.com/posts/5
 
 ### creando una nueva publicación                   addPost()
 POST https://jsonplaceholder.typicode.com/posts 
 content-type: application/json
 
 {
-    "title":"aprendiendo vscode",
+    "title":"aprendiendo VSCode",
     "body":"bien"
 }
 
