@@ -1,24 +1,23 @@
 
-
-### obteniendo datos de un usuario aleatorio
+### obteniendo datos de un usuario aleatorio  
 GET https://randomuser.me/api
 
-
-### obteniendo datos de un usuario aleatorio
-GET https://randomuser.me/api/?nat=gb
-
-### obteniendo todas las publicaciones
+### obteniendo todas las publicaciones              getAllPosts()
 GET https://jsonplaceholder.typicode.com/posts
 
-### obteniendo una sola publicación
-
+### obteniendo una sola publicación                 getPostById($id)
 GET https://jsonplaceholder.typicode.com/posts/2
 
-### eliminando una publicación
-DELETE https://jsonplaceholder.typicode.com/posts/1
+### creando una nueva publicación                   addPost()
+POST https://jsonplaceholder.typicode.com/posts 
+content-type: application/json
 
-### Actualizando una publicación por Id
+{
+    "title":"aprendiendo vscode",
+    "body":"bien"
+}
 
+### Actualizando una publicación por Id              updatePost($id) 
 PUT https://jsonplaceholder.typicode.com/posts/1
 content-type: application/json
 
@@ -27,12 +26,5 @@ content-type: application/json
     "body":"procesado"
 }
 
-### creando una nueva publicación
-
-POST https://jsonplaceholder.typicode.com/posts 
-content-type: application/json
-
-{
-    "title":"aprendiendo vscode",
-    "body":"bien"
-}
+### eliminando una publicación                      deletePost($id)
+DELETE https://jsonplaceholder.typicode.com/posts/1
