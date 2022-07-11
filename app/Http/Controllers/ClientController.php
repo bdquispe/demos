@@ -7,10 +7,16 @@ use Illuminate\Support\Facades\Http;
 
 class ClientController extends Controller {
 
-	public function index() {
-		$res = Http::get('https://randomuser.me/api/');
-		return view('perfil')->with('user', $res->json());
+	public function cities() {
+		$res = Http::get('http://172.16.1.6:9014/api/v1/city');
+		return $res->json();
 	}
+
+
+	public function index() {
+        $res = Http::get('http://172.16.1.6:9014/api/v1/city');
+        return view('perfil')->with('user', $res->json());
+    }
 
 	public function getAllPosts() {
 		$res = Http::get('https://jsonplaceholder.typicode.com/posts');

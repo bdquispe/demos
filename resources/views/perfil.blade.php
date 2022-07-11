@@ -136,86 +136,11 @@
 </style>
 
 <div class="page-content container" id="page-content">
-  <div class="padding">
-		<div class="row container d-flex justify-content-center">
-			<div class="col-xl-9 col-md-12">
-				<div class="card user-card-full">
-					<div class="row m-l-0 m-r-0">
-						<div class="col-sm-4 bg-c-lite-green user-profile">
-							<div class="card-block text-center text-white">
-								<div class="m-b-25">
-									<img src="{{ $user['results'][0]['picture']['large'] }}" class="img-radius" alt="User-Profile-Image" style="border-radius: 50%;">
-								</div>
-
-								<h3 class="f-w-600">{{ $user['results'][0]['name']['title'] }} {{ $user['results'][0]['name']['first'] }} {{ $user['results'][0]['name']['last'] }}</h3>
-
-								<p>Additional Information</p>
-								
-								<i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
-							</div>
-						</div>
-
-						<div class="col-sm-8">
-							<div class="card-block">
-								<h6 class="m-b-20 p-b-5 b-b-default f-w-600">Información personal</h6>
-
-								<div class="row">
-									<div class="col-sm-6">
-										<p class="m-b-10 f-w-600">Género</p>
-										<h6 class="text-muted f-w-400">{{ $user['results'][0]['gender'] }}</h6>
-									</div>
-									<div class="col-sm-6">
-										<p class="m-b-10 f-w-600">Fecha registro</p>
-										<h6 class="text-muted f-w-400">{{ $user['results'][0]['registered']['date'] }}</h6>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-sm-12">
-										<p class="m-b-10 f-w-600">Dirección</p>
-										<h6 class="text-muted f-w-400">{{ $user['results'][0]['location']['country'] }} {{ $user['results'][0]['location']['state'] }} {{ $user['results'][0]['location']['city'] }} {{ $user['results'][0]['location']['street']['name'] }} {{ $user['results'][0]['location']['street']['number'] }}</h6>
-									</div>
-								</div>
-
-								<h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Datos de contacto</h6>
-
-								<div class="row">
-									<div class="col-sm-6">
-										<p class="m-b-10 f-w-600">Teléfono</p>
-										<h6 class="text-muted f-w-400">{{ $user['results'][0]['phone'] }}</h6>
-									</div>
-
-									<div class="col-sm-6">
-										<p class="m-b-10 f-w-600">Móvil</p>
-										<h6 class="text-muted f-w-400">{{ $user['results'][0]['cell'] }}</h6>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-sm-8">
-										<p class="m-b-10 f-w-600">Email</p>
-										<h6 class="text-muted f-w-400">{{ $user['results'][0]['email'] }}</h6>
-									</div>
-								</div>
-
-								<ul class="social-link list-unstyled m-t-40 m-b-10">
-									<li>
-										<a href="https://facebook.com/" target="__blank" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a>
-									</li>
-
-									<li>
-										<a href="https://twitter.com/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a>
-									</li>
-
-									<li>
-										<a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="instagram" data-abc="true"><i class="mdi mdi-instagram feather icon-instagram instagram" aria-hidden="true"></i></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-  </div>
+{{ $user['data']['cities'][0]['name'] }}
+<?php
+    echo "<pre>";
+    var_dump($user);
+    echo "</pre>";
+    // json_encode($user);
+?>
 </div>

@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/perfil', [ClientController::class, 'index'])->name('perfil.index');
+
+//Route::get('/cuidad', [ClientController::class, 'cities'])->name('ciudad');

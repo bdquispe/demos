@@ -28,3 +28,6 @@ content-type: application/json
 
 ### eliminando una publicación                      deletePost($id)
 DELETE https://jsonplaceholder.typicode.com/posts/1
+
+### send
+GET http://172.16.1.6:9014/api/v1/city
